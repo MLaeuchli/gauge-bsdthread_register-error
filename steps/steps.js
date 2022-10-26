@@ -1,7 +1,9 @@
 /* beforeScenario, afterScenario, step */
 const path = require('node:path');
 const {
-  goto
+  goto,
+  openBrowser,
+  closeBrowser
 } = require('taiko');
 
 beforeScenario(async () => {
