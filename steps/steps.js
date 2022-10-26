@@ -1,4 +1,4 @@
-/* beforeScenario, afterScenario, step */
+/* beforeScenario, afterScenario, step, gauge */
 const path = require('node:path');
 const {
   goto,
@@ -7,6 +7,11 @@ const {
 } = require('taiko');
 
 const headless = process.env.headless_chrome.toLowerCase() === 'true';
+
+gauge.screenshotFn = async function () {
+  /* eslint-disable-next-line no-return-await */
+  return await screenshot({ encoding: 'base64' });
+};
 
 beforeScenario(async () => {
   await openBrowser({
@@ -20,6 +25,6 @@ afterScenario(async () => {
   await closeBrowser();
 });
 
-step('Go to <url>', url => {
-  goto(url);
+step('Go to <url>', async url => {
+  await goto(url);
 });

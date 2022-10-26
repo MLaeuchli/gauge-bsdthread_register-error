@@ -2,4 +2,4 @@
 
 ## Test 1
 
-* Go to "www.google.com"
+* Go to "https://google.com"
