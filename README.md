@@ -1,7 +1,11 @@
 # gauge-bsdthread_register-error
 
 This is a minimal Project to run a simple Gauge-Taiko test.
+
+
 On Mac OS 12.6 and 13.0 with an Intel core this results in the following error:
+
+
 ´´´
 fatal error: runtime: bsdthread_register error
 runtime stack:
@@ -17,6 +21,8 @@ runtime.rt0_go(0x7ff7bfefe2f0, 0x1, 0x7ff7bfefe2f0, 0x1000000,
 	/usr/local/go/src/runtime/asm_amd64.s:252 +0x1f4 fp=0x7ff7bfefe2c8 sp=0x7ff7bfefe2c0 pc=0x1050d24
 Error starting plugin Html Report 4.0.8. Failed to connect to plugin. Timed out connecting to 127.0.0.1:49475
 ´´´
+
+
 The test will run normaly but no Report is created.
 
 
