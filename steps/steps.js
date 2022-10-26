@@ -6,6 +6,8 @@ const {
   closeBrowser
 } = require('taiko');
 
+const headless = process.env.headless_chrome.toLowerCase() === 'true';
+
 beforeScenario(async () => {
   await openBrowser({
     headless,
