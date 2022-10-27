@@ -9,7 +9,6 @@ const {
 const headless = process.env.headless_chrome.toLowerCase() === 'true';
 
 gauge.screenshotFn = async function () {
-  /* eslint-disable-next-line no-return-await */
   return await screenshot({ encoding: 'base64' });
 };
 
